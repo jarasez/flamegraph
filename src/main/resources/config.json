@@ -1,4 +1,4 @@
 {
     "FLAMEGRAPHER_JFR_DUMP_PATH" : "/tmp/flamegrapher/",
-    "FLAMEGRAPHER_HTTP_PORT" : 8080
+    "FLAMEGRAPHER_HTTP_PORT" : 8081
 }

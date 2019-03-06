@@ -184,7 +184,7 @@ public class MainVerticle extends AbstractVerticle {
               .failureHandler(this::failureHandler);
               
         if (config().getBoolean("FLAMEGRAPHER_EPHEMERAL_PORT", Boolean.FALSE) != Boolean.TRUE) {
-          serverPort = config().getInteger("FLAMEGRAPHER_HTTP_PORT", 8080);
+          serverPort = config().getInteger("FLAMEGRAPHER_HTTP_PORT", 8081);
         } else {
           try (ServerSocket s = new ServerSocket(0)) {
             serverPort = s.getLocalPort();

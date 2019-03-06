@@ -22,8 +22,6 @@ import com.hubrick.vertx.s3.model.request.GetBucketRequest;
 import com.hubrick.vertx.s3.model.request.GetObjectRequest;
 import com.hubrick.vertx.s3.model.request.PutObjectRequest;
 import com.julienviet.childprocess.Process;
-import com.oracle.jmc.flightrecorder.CouldNotLoadRecordingException;
-import com.oracle.jmc.flightrecorder.jdk.JdkTypeIDs;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -44,6 +42,8 @@ import io.vertx.core.logging.Logger;
 import io.vertx.core.logging.LoggerFactory;
 import io.vertx.ext.web.FileUpload;
 import io.vertx.ext.web.RoutingContext;
+import org.openjdk.jmc.flightrecorder.CouldNotLoadRecordingException;
+import org.openjdk.jmc.flightrecorder.jdk.JdkTypeIDs;
 
 public class JavaFlightRecorder implements Profiler {
     private static final Logger logger = LoggerFactory.getLogger(JavaFlightRecorder.class);
@@ -51,10 +51,10 @@ public class JavaFlightRecorder implements Profiler {
     /**
      * This JDK event type is not yet available on JdkTypeIDs class, but is used
      * starting with JDK 9. Method profiling is now split into
-     * <code>com.oracle.jdk.ExecutionSample</code> and
-     * <code>com.oracle.jdk.NativeMethodSample</code>
+     * <code>org.openjdk.jdk.ExecutionSample</code> and
+     * <code>org.openjdk.jdk.NativeMethodSample</code>
      */
-    public static final String NATIVE_METHOD_SAMPLE = "com.oracle.jdk.NativeMethodSample";
+    public static final String NATIVE_METHOD_SAMPLE = "org.openjdk.jdk.NativeMethodSample";
 
     private final JsonObject config;
     private final Vertx vertx;

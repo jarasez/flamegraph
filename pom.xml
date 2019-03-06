@@ -252,15 +252,15 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.oracle.jmc</groupId>
-			<artifactId>com.oracle.jmc.common</artifactId>
-			<version>${jmc.version}</version>
+			<groupId>org.openjdk.jmc</groupId>
+  			<artifactId>common</artifactId>
+  			<version>7.1.0-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.oracle.jmc</groupId>
-			<artifactId>com.oracle.jmc.flightrecorder</artifactId>
-			<version>${jmc.version}</version>
+			 <groupId>org.openjdk.jmc</groupId>
+  			 <artifactId>flightrecorder</artifactId>
+  			 <version>7.1.0-SNAPSHOT</version>
 		</dependency>
 
 		<!-- JAXB has been removed from default modules with Java 9 -->
@@ -327,7 +327,7 @@
 	<repositories>
 		<repository>
 			<id>repo</id>
-			<url>file://${project.basedir}/repo</url>
+			<url>file:///Users/mihaela.hetea/.m2/repository</url>
 		</repository>
 	</repositories>
 </project>

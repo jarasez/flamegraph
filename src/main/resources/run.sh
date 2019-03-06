@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Default values
-HTTP_PORT=8080
+HTTP_PORT=8081
 while getopts 'p:' option; do
   case "$option" in
 	p) HTTP_PORT=$OPTARG
